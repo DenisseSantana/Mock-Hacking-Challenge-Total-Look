@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+.offerList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-around;
+  border-color: cadetblue;
+}
+
+.offers {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.bannerOffers {
+  display: flex;
+  float: inherit;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.offerContainer {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-size: 50px;
+  color: white;
+  filter: brightness(0.9);
+  background-image: url("../Assets/background.jpg");
+}
+
+.offerContainer h3 {
+  align-content: center;
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: black;
+}
+
+.offerContainer p {
+  align-content: center;
+  font-family: "Montserrat";
+  font-size: 40px;
+}

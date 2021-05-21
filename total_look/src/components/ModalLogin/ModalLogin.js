@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CustomDialog, useDialog } from 'react-st-modal';
 
-import "./modalLogin.css";
+import '../ModalLogin/ModalLogin.css';
 
 function ModalLog() {
     // use this hook to control the dialog
@@ -11,26 +11,33 @@ function ModalLog() {
 
     return (
         <div className="modalLoginContent">
-        <input
-            type="name"
-            onChange={(e) => {
-            setValue(e.target.value);
-            }}
-        />
-        <input
-            type="password"
-            onChange={(e) => {
-            setValue(e.target.value);
-            }}
-        />
-        <button
-            onClick={() => {
-            // Сlose the dialog and return the value
-            dialog.close(value);
-            }}
-        >
-            Login
-        </button>
+            <div className="h2ModalLogin">
+                <h2>Welcome back!</h2>
+                <h2>Sign In your account!</h2>
+            </div>
+            <input
+                type="name"
+                onChange={(e) => {
+                setValue(e.target.value);
+                }}
+                className ="inputsModalLogin"
+            />
+            <input
+                type="password"
+                onChange={(e) => {
+                setValue(e.target.value);
+                }}
+                className ="inputsModalLogin"
+            />
+            <button
+                onClick={() => {
+                // Сlose the dialog and return the value
+                dialog.close(value);
+                }}
+                className ="buttonModalLogin"
+            >
+                Login
+            </button>
         </div>
     );
 }
@@ -38,17 +45,19 @@ function ModalLog() {
 function ModalLogin() {
     return (
         <div>
-        <button
+        <a className="log" href = " "
             onClick={async () => {
-                const result = await CustomDialog(<ModalLog />, {
-                    title: 'Welcome back! Sign In your account!',
-                    showCloseIcon: true,
-                });
+                const result = await CustomDialog(<ModalLog/>
+                //     , {
+                //     title: 'Welcome back! Sign In your account!',
+                //     showCloseIcon: true,
+                // }
+                );
                 console.log(result);
             }}
         >
-            Login
-        </button>
+            Log
+        </a>
         </div>
     );
 }
