@@ -1,0 +1,9 @@
+.modalLoginContent { 
+    background-image: url("../../assets/backgroundModalLogin.jpg");
+    background-size: auto;
+    position: relative;
+    width: 450px;
+    height: 472px;
+    margin: 0%;
+    padding: 0%;
+}
