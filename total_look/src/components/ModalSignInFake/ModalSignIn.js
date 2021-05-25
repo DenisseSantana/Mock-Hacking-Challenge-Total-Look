@@ -14,13 +14,14 @@ function ModalLog() {
             <div className="h2ModalSignIn">
                 <h2>Welcome back!</h2>
                 <h2>Sign In your account!</h2>
+                <h2> Holi </h2>
             </div>
             <input
                 type="name"
                 onChange={(e) => {
                 setValue(e.target.value);
                 }}
-                className ="inputsModalSignIn"
+                className ="inputsModalSignIn h2ModalSignIn"
             />
             <input
                 type="password"
@@ -34,7 +35,7 @@ function ModalLog() {
                 // Сlose the dialog and return the value
                 dialog.close(value);
                 }}
-                className ="buttonModalSignIn"
+                className ="buttonModalSignIn h2ModalSignIn"
             >
                 SignIn
             </button>
@@ -45,7 +46,7 @@ function ModalLog() {
 function ModalSignIn() {
     return (
         <div>
-        <a className="log" href = " "
+        <a className="log h2ModalSignIn" href = " "
             onClick={async (e) => {
                 e.preventDefault();
                 const result = await CustomDialog(<ModalLog/>
